@@ -80,6 +80,7 @@
   var laptopsXhrProcessing = false;
 
   function findNear(beacons, target) {
+    if(!beacons) return;
     document.querySelector('.device-pin').style.display = 'none';
     var queryUrl = '?';
     var beaconQueryParam = beacons.map(function(beacon){
