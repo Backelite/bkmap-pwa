@@ -726,6 +726,42 @@ button:focus {
 	color: #c7c7c9;
 }
 
+.grouped-by-category [data-category='1']:first-child::before,
+.grouped-by-category :not([data-category='1']) + [data-category='1']::before {
+	content: 'Salles de réunion';
+	color: #7cbf7f;
+}
+
+.grouped-by-category [data-category='2']:first-child::before,
+.grouped-by-category :not([data-category='2']) + [data-category='2']::before {
+	content: 'Espaces communs';
+	color: #6584c7;
+}
+
+.grouped-by-category [data-category='3']:first-child::before,
+.grouped-by-category :not([data-category='3']) + [data-category='3']::before {
+	content: 'Plateaux projets';
+	color: #dc4b7c;
+}
+
+.grouped-by-category [data-category='4']:first-child::before,
+.grouped-by-category :not([data-category='4']) + [data-category='4']::before {
+	content: 'BK People';
+	color: #8d65e0;
+}
+
+.list__item::after {
+	content: 'L' attr(data-level) ' / ' attr(data-space);
+	font-size: 0.65em;
+	line-height: 3;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 0.5em;
+	pointer-events: none;
+	color: #c7c7c9;
+}
+
 .list__link {
 	font-size: 0.85em;
 	display: block;
@@ -898,10 +934,25 @@ button:focus {
 	fill: #371CA5;
 	opacity: 0.25;
 }
+
 .hidden{
 	display: none;
 }
+    
+.icon--toilet,.icon-meeting-room,.icon--user,.icon--kitchen {
+	height: 40px;
+	width: 30px;
+}
+.icon-meeting-room{
+	height: 35px;
+    width: 36px;
+    padding-right: 10px;
+}
 
+.icon--kitchen {
+	padding-left: 3px;
+    width: 36px;
+}
 @media screen and (max-width: 65.625em), screen and (max-height: 40.625em) {
 	.main {
 		width: 100vw;
