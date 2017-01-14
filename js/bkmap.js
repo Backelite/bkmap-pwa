@@ -83,7 +83,7 @@
     document.querySelector('.device-pin').style.display = 'none';
     var queryUrl = '?';
     var beaconQueryParam = beacons.map(function(beacon){
-      return 'beacon[]='+beacon;
+      return 'beacons[]='+beacon;
     });
 
     queryUrl += beaconQueryParam.join('&');
