@@ -918,13 +918,10 @@ button:focus {
 .pin--3-7 { top: 32vmin; left: 37vmin; }
 
 /* Pins for floor 4 */
-.pin--4-1 { top: 34px; left: 1px; }
-.pin--4-2 { top: 55px; left: 1116px; }
-.pin--4-3 { top: 399px; left: 1px; }
-.pin--4-4 { top: 399px; left: 942px; }
-.pin--4-5 { top: 202px; left: 942px; }
-.pin--4-6 { top: 201px; left: 417px; }
-.pin--4-7 { top: 400px; left: 417px; }
+.pin--4-1 { top: 204px; left: 70px; }
+.pin--4-2 { top: 375px; left: 394px; }
+.pin--4-3 { top: 377px; left: 11px; }
+.pin--4-4 { top: 375px; left: 182px; }
 
 /* Mobile compatability */
 .open-search,
@@ -970,4 +967,8 @@ button:focus {
 		padding-right: 4em;
 		text-align: left;
 	}
+}
+
+.pin--hidden {
+	display: none;
 }
