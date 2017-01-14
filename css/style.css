@@ -920,8 +920,7 @@ button:focus {
 
 /* Pins for floor 4 */
 .pin--4-1 { top: 192px; left: 94px; }
-.pin--4-2 { top: 317px; left: 228px; }
-.pin--4-3 { top: 319px; left: 344px; }
+.pin--4-2 { top: 319px; left: 344px; }
 .pin--4-4 { top: 60px; left: 370px; }
 
 /* Mobile compatability */
