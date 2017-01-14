@@ -155,7 +155,8 @@
 			});
 			pin.addEventListener('click', function(ev) {
 				ev.preventDefault();
-				// open content for this pin
+        window.BkMap.findNear(window.BkMap.rooms[pin.getAttribute('data-room')], pin.getAttribute('data-space'));
+        // open content for this pin
 				openContent(pin.getAttribute('data-space'));
 				
 				// remove hover class (showing the title)
@@ -171,17 +172,13 @@
 		// clicking on a listed space: open level - shows space
 		spaces.forEach(function(space) {
 			var spaceItem = space.parentNode,
-				level = spaceItem.getAttribute('data-level'),
-				spacerefval = spaceItem.getAttribute('data-space');
+				level = spaceItem.getAttribute('data-level');
 
 			space.addEventListener('click', function(ev) {
 				ev.preventDefault();
-				// for smaller screens: close search bar
-				closeSearch();
 				// open level
 				showLevel(level);
-				// open content for this space
-				openContent(spacerefval);
+				window.BkMap.localize(ev.currentTarget.parentElement.dataset.device);
 			});
 		});
 

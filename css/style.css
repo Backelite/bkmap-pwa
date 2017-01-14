@@ -726,42 +726,6 @@ button:focus {
 	color: #c7c7c9;
 }
 
-.grouped-by-category [data-category='1']:first-child::before,
-.grouped-by-category :not([data-category='1']) + [data-category='1']::before {
-	content: 'Nourish & Refresh';
-	color: #7cbf7f;
-}
-
-.grouped-by-category [data-category='2']:first-child::before,
-.grouped-by-category :not([data-category='2']) + [data-category='2']::before {
-	content: 'Learn & Create';
-	color: #6584c7;
-}
-
-.grouped-by-category [data-category='3']:first-child::before,
-.grouped-by-category :not([data-category='3']) + [data-category='3']::before {
-	content: 'Swap & Give';
-	color: #dc4b7c;
-}
-
-.grouped-by-category [data-category='4']:first-child::before,
-.grouped-by-category :not([data-category='4']) + [data-category='4']::before {
-	content: 'Relax & Recharge';
-	color: #8d65e0;
-}
-
-.list__item::after {
-	content: 'L' attr(data-level) ' / ' attr(data-space);
-	font-size: 0.65em;
-	line-height: 3;
-	position: absolute;
-	top: 0;
-	right: 0;
-	padding: 0 0.5em;
-	pointer-events: none;
-	color: #c7c7c9;
-}
-
 .list__link {
 	font-size: 0.85em;
 	display: block;
@@ -924,7 +888,6 @@ button:focus {
 .pin--4-3 { top: 319px; left: 344px; }
 .pin--4-4 { top: 60px; left: 370px; }
 
-
 /* Mobile compatability */
 .open-search,
 .close-search {
@@ -977,4 +940,13 @@ button:focus {
 		padding-right: 4em;
 		text-align: left;
 	}
+}
+
+.pin--hidden {
+	display: none;
+}
+
+.people-item {
+	display: block;
+	text-align: left;
 }
