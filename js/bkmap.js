@@ -38,6 +38,7 @@
   var laptopsXhrProcessing = false;
 
   function findNear(beacons, target) {
+    document.querySelector('.device-pin').style.display = 'none';
     var queryUrl = '?';
     var beaconQueryParam = beacons.map(function(beacon){
       return 'beacon[]='+beacon;
@@ -64,6 +65,7 @@
       }
     }, false);
   }
+
   var localizeXhrProcessing = false;
   function localize(device) {
     var xhr = new XMLHttpRequest();
