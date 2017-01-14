@@ -52,6 +52,7 @@
 		mallLevelsEl = mall.querySelector('.levels'),
 		// mall´s levels
 		mallLevels = [].slice.call(mallLevelsEl.querySelectorAll('.level')),
+
 		// total levels
 		mallLevelsTotal = mallLevels.length,
 		// surroundings elems
@@ -97,7 +98,8 @@
 		containerEl = document.querySelector('.container'),
 		// close search ctrl
 		closeSearchCtrl = spacesListEl.querySelector('button.close-search');
-
+		console.log(mallLevels);
+		console.log(mallLevelsTotal);
 	function init() {
 		// init/bind events
 		initEvents();
@@ -155,6 +157,7 @@
 				ev.preventDefault();
 				// open content for this pin
 				openContent(pin.getAttribute('data-space'));
+				
 				// remove hover class (showing the title)
 				classie.remove(contentItem, 'content__item--hover');
 			});
@@ -277,6 +280,7 @@
 	 */
 	function showPins(levelEl) {
 		var levelEl = levelEl || mallLevels[selectedLevel - 1];
+		console.log(levelEl.querySelector('.level__pins'));
 		classie.add(levelEl.querySelector('.level__pins'), 'level__pins--active');
 	}
 
@@ -285,6 +289,7 @@
 	 */
 	function removePins(levelEl) {
 		var levelEl = levelEl || mallLevels[selectedLevel - 1];
+		console.log(levelEl.querySelector('.level__pins'));
 		classie.remove(levelEl.querySelector('.level__pins'), 'level__pins--active');
 	}
 
@@ -350,6 +355,7 @@
 		// transition direction class
 		classie.add(currentLevel, 'level--moveOut' + direction);
 		// next level element
+		console.log("nextLevel", mallLevels[selectedLevel-1])
 		var nextLevel = mallLevels[selectedLevel-1]
 		// ..becomes the current one
 		classie.add(nextLevel, 'level--current');
